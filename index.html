@@ -5,34 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Table</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(255, 230, 234);
+        }
+        h1 {
+            color: rgb(147, 207, 57);
+            text-align: center;
+            font-family: Impact, 'Arial Narrow Bold', sans-serif;
+            font-size: 70px;
+            font-weight: 400;
+        }
+        .option {
+            display:flex;
+            flex-direction: column;
+            flex-basis: 35px;
+            flex-wrap: wrap;
+            float: left;
+            width:33.3%;
+            padding: 5%;
+            text-align: center;
+        }
         .listahan {
             list-style-type: none;
-            border: 1px solid #eee;
+            border: 3.5px dashed rgb(169, 223, 169);
             margin: 0;
             padding: 0;
             -webkit-transition: 0.3s;
             transition: 0.3s;
         }
         .listahan:hover {
-            box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+            box-shadow: 0 8px 12px lightgreen
         }
         .listahan .type {
-            background-color: #111;
+            background-color: pink;
             color: white;
             font-size: 25px;
         }
-        
+        .listahan li {
+            background-color: #eee;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .button {
+            background-color: palevioletred;
+            border: none;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        @media only screen and (max-width: 600px) {
+            .option {
+                width: 100%;
+                flex-direction: column;
+        }
+    }
     </style>
 </head>
 <body>
+    <h1>Pick Your Life</h1>
     <div class="option">
         <ul class="listahan">
             <li class="type">Chill Gal</li>
             <li>Office Worker</li>
+
             <li>Coffee 24/7</li>
             <li>Horrible Posture</li>
             <li>Security</li>
-            <li class="grey"><a href="#" class="button">Sign Up</a></li>
+            <li class="grey"><a href="#" class="button">Choose</a></li>
         </ul>
     </div>
 
@@ -43,7 +87,7 @@
             <li>Wine</li>
             <li>Criticism</li>
             <li>Passion</li>
-            <li class="grey"><a href="#" class="button">Sign Up</a></li>
+            <li class="grey"><a href="#" class="button">Choose</a></li>
         </ul>
     </div>
     
@@ -54,7 +98,7 @@
             <li>Twinings</li>
             <li>Underpaid</li>
             <li>Knowledge</li>
-            <li class="grey"><a href="#" class="button">Sign Up</a></li>
+            <li class="grey"><a href="#" class="button">Choose</a></li>
         </ul>
     </div>
 </body>
